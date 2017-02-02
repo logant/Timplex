@@ -24,7 +24,7 @@ namespace LMNts.Timplex
         public TimplexComponent()
           : base("Single Line Font", "Timplex",
               "Single Line Font Generator",
-              "LMNts", "LMNts")
+              "Sets", "Text")
         {
         }
 
@@ -381,6 +381,14 @@ namespace LMNts.Timplex
         public override Guid ComponentGuid
         {
             get { return new Guid("{ec3a767b-2038-49b1-a58e-3fb3dd1b0363}"); }
+        }
+
+        public override GH_Exposure Exposure
+        {
+            get
+            {
+                return GH_Exposure.quarternary | GH_Exposure.obscure;
+            }
         }
 
         private List<Curve> Unknown(Point3d pt)
